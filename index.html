@@ -3,27 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
     <title>Frontend Mentor | Calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -32,37 +26,38 @@
           <h3>calc</h3>
           <div class="right">
             <div class="theme-toggle">
-              <input type="radio" name="theme-selector" id="theme-one" /><label
-                for="theme-one"
-                >1</label
-              >
-              <input type="radio" name="theme-selector" id="theme-two" /><label
-                for="theme-two"
-                >2</label
-              >
-              <input
-                type="radio"
-                name="theme-selector"
-                id="theme-three"
-              /><label for="theme-three">3</label>
+              <div class="number-toggle">
+                <input
+                  type="radio"
+                  name="theme-selector"
+                  id="theme-one"
+                /><label for="theme-one">1</label>
+                <input
+                  type="radio"
+                  name="theme-selector"
+                  id="theme-two"
+                /><label for="theme-two">2</label>
+                <input
+                  type="radio"
+                  name="theme-selector"
+                  id="theme-three"
+                /><label for="theme-three">3</label>
+              </div>
+              <div class="box">
+                <div class="circle-one show"></div>
+                <div class="circle-two show"></div>
+                <div class="circle-three show"></div>
+              </div>
             </div>
-            <p>Theme</p>
-            <div class="box">
-              <div class="circle"></div>
-            </div>
+            <p>THEME</p>
           </div>
         </div>
         <div class="calculate">
           <form>
-            <input
-              type="text"
-              name="text"
-              readonly
-              class="js-calculate-output"
-            />
+            <input type="text" name="text" class="js-calculate-output" />
           </form>
         </div>
-        <div class="calculate-body">
+        <div class="number-body">
           <button class="number">7</button>
           <button class="number">8</button>
           <button class="number">9</button>
