@@ -1,0 +1,203 @@
+:root{
+                        /* THEME 1 */
+    /* BG */
+    --clr-main-bg: hsl(222, 26%, 31%);
+    --clr-toggle-bg: hsl(223, 31%, 20%);
+    --clr-keypad-bg: hsl(223, 31%, 20%);
+    --clr-screen-bg: hsl(224, 36%, 15%);
+    /* KEYS */
+    --clr-reset-bg: hsl(225, 21%, 49%);
+    --clr-reset-shadow: hsl(224, 28%, 35%);
+    --clr-equal-bg: hsl(6, 63%, 50%);
+    --clr-equal-toggle: hsl(6, 63%, 50%);
+    --clr-equal-shadow: hsl(6, 70%, 34%);
+    --clr-number-bg: hsl(30, 25%, 89%);
+    --clr-number-shadow: hsl(28, 16%, 65%);
+    /* TEXT */
+    --clr-number-text: hsl(221, 14%, 31%);
+    --clr-equal-text: hsl(0, 0%, 100%);
+
+/*                         THEME 2
+    BG
+    --light-gray-main-bg: hsl(0, 0%, 90%);
+    --grayish-red-toggle: hsl(0, 5%, 81%);
+    --very-light-gray-screen-bg: hsl(0, 0%, 93%);
+    KEYS
+    --dark-moderate-cyan-bg: hsl(185, 42%, 37%);
+    --very-dark-cyan-toggle: hsl(185, 58%, 25%);
+    --orange: hsl(25, 98%, 40%);
+    --dark-orange: hsl(25, 99%, 27%);
+    --light-grayish-yellow: hsl(45, 7%, 89%);
+    --dark-grayish-orange: hsl(35, 11%, 61%);
+    TEXT
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+                            THEME 3
+    BG
+    --very-dark-violet-main-bg: hsl(268, 75%, 9%);
+    --very-dark-violet-toggle: hsl(268, 71%, 12%);
+    KEYS
+    --dark-violet-bg: hsl(281, 89%, 26%);
+    --vivid-magenta: hsl(285, 91%, 52%);
+    --pure-cyan: hsl(176, 100%, 44%);
+    --soft-cyan: hsl(177, 92%, 70%);
+    --very-dark-violet: hsl(268, 47%, 21%);
+    --dark-magenta: hsl(290, 70%, 36%);
+    TEXT
+    --light-yellow: hsl(52, 100%, 62%);
+    --very-dark-blue: hsl(198, 20%, 13%); */
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    background-color: var(--clr-main-bg);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98.5vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 22.5%;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h3, input[type="radio"] + label,.right > p, .js-calculate-output, .number.blue, .number.red{
+    color: var(--clr-equal-text);
+}
+
+h3{
+    font-size: 28px;
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.right > p{
+    position: relative;
+    right: 3.5rem;
+    bottom: 0.8rem;
+    font-size: 10px;
+}
+
+.theme-toggle{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+input[type="radio"] + label{
+    margin-left: 0.5rem;
+    font-size: 12px;
+}
+
+.box{
+    width: 3.6rem;
+    height: 1.2rem;
+    background-color: var(--clr-toggle-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.show{
+    width: 20%;
+    height: 65%;
+    border-radius: 50%;
+    background-color: var(--clr-equal-toggle);
+}
+
+.calculate{
+    width: 100%;
+}
+
+.js-calculate-output{
+    outline: 0;
+    border: 0;
+    background-color: var(--clr-screen-bg);
+    width: 100%;
+    direction: rtl;
+    font-size: 48px;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.number-body{
+    background-color: var(--clr-keypad-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: 8px;
+}
+
+.number{
+    width: 5rem;
+    height: 3.25rem;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--clr-number-bg);
+    color: var(--clr-number-text);
+    box-shadow: 0px 4px 0px var(--clr-number-shadow);
+}
+
+
+.blue, .red{
+    font-size: 24px;
+}
+
+.number.blue{
+    background-color: var(--clr-reset-bg);
+    box-shadow: 0px 4px 0px var(--clr-reset-shadow);
+}
+
+.number.red{
+    background-color: var(--clr-equal-bg);
+    box-shadow: 0px 4px 0px var(--clr-equal-shadow);
+}
+
+.double{
+    width: 46.5%;
+}
+
+button{
+    font-size: 32px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--clr-equal-text);
+}
+
+.attribution a {
+    color: var(--clr-equal-text)
+}
