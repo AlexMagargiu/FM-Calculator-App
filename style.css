@@ -16,36 +16,6 @@
     /* TEXT */
     --clr-number-text: hsl(221, 14%, 31%);
     --clr-equal-text: hsl(0, 0%, 100%);
-
-/*                         THEME 2
-    BG
-    --light-gray-main-bg: hsl(0, 0%, 90%);
-    --grayish-red-toggle: hsl(0, 5%, 81%);
-    --very-light-gray-screen-bg: hsl(0, 0%, 93%);
-    KEYS
-    --dark-moderate-cyan-bg: hsl(185, 42%, 37%);
-    --very-dark-cyan-toggle: hsl(185, 58%, 25%);
-    --orange: hsl(25, 98%, 40%);
-    --dark-orange: hsl(25, 99%, 27%);
-    --light-grayish-yellow: hsl(45, 7%, 89%);
-    --dark-grayish-orange: hsl(35, 11%, 61%);
-    TEXT
-    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
-
-                            THEME 3
-    BG
-    --very-dark-violet-main-bg: hsl(268, 75%, 9%);
-    --very-dark-violet-toggle: hsl(268, 71%, 12%);
-    KEYS
-    --dark-violet-bg: hsl(281, 89%, 26%);
-    --vivid-magenta: hsl(285, 91%, 52%);
-    --pure-cyan: hsl(176, 100%, 44%);
-    --soft-cyan: hsl(177, 92%, 70%);
-    --very-dark-violet: hsl(268, 47%, 21%);
-    --dark-magenta: hsl(290, 70%, 36%);
-    TEXT
-    --light-yellow: hsl(52, 100%, 62%);
-    --very-dark-blue: hsl(198, 20%, 13%); */
 }
 
 *, *::before, *::after{
@@ -82,7 +52,7 @@ main{
     width: 100%;
 }
 
-h3, input[type="radio"] + label,.right > p, .js-calculate-output, .number.blue, .number.red{
+h3, .theme-number + label,.right > p, .js-calculate-output, .number.blue, .number.red{
     color: var(--clr-equal-text);
 }
 
@@ -90,12 +60,13 @@ h3{
     font-size: 28px;
 }
 
-input[type="radio"]{
+.theme-number, .no-appearance{
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
+    display: none;
 }
 
 .right > p{
@@ -111,7 +82,7 @@ input[type="radio"]{
     gap: 0.25rem;
 }
 
-input[type="radio"] + label{
+.theme-number + label{
     margin-left: 0.5rem;
     font-size: 12px;
 }
@@ -126,11 +97,17 @@ input[type="radio"] + label{
     justify-content: space-around;
 }
 
-.show{
+.circle{
     width: 20%;
     height: 65%;
     border-radius: 50%;
     background-color: var(--clr-equal-toggle);
+    position: relative;
+    cursor: pointer;
+}
+
+.hidden{
+    opacity: 0;
 }
 
 .calculate{
@@ -185,11 +162,48 @@ input[type="radio"] + label{
 }
 
 .double{
-    width: 46.5%;
+    width: 47.5%;
 }
 
 button{
     font-size: 32px;
+}
+
+:root:has(#theme-two:checked){
+    --clr-main-bg: hsl(0, 0%, 90%);
+    --clr-toggle-bg: hsl(0, 5%, 81%);
+    --clr-keypad-bg: hsl(0, 5%, 81%);
+    --clr-screen-bg: hsl(0, 0%, 93%);
+    /* KEYS */
+    --clr-reset-bg: hsl(185, 42%, 37%);
+    --clr-reset-shadow: hsl(185, 58%, 25%);
+    --clr-equal-bg: hsl(25, 98%, 40%);
+    --clr-equal-toggle: hsl(25, 98%, 40%);
+    --clr-equal-shadow: hsl(25, 99%, 27%);
+    --clr-number-bg: hsl(45, 7%, 89%);
+    --clr-number-shadow: hsl(35, 11%, 61%);
+    /* TEXT */
+    --clr-number-text: hsl(60, 10%, 19%);
+    --clr-equal-text: hsl(0, 0%, 100%);
+}
+
+:root:has(#theme-three:checked){
+    --clr-main-bg: hsl(268, 75%, 9%);
+    --clr-toggle-bg: hsl(268, 71%, 12%);
+    --clr-keypad-bg: hsl(268, 71%, 12%);
+    --clr-screen-bg: hsl(268, 71%, 12%);
+    /* KEYS */
+    --clr-reset-bg: hsl(281, 89%, 26%);
+    --clr-reset-shadow: hsl(285, 91%, 52%);
+    --clr-equal-bg: hsl(176, 100%, 44%);
+    --clr-equal-toggle: hsl(176, 100%, 44%);
+    --clr-equal-shadow: hsl(177, 92%, 70%);
+    --clr-number-bg: hsl(268, 47%, 21%);
+    --clr-number-shadow: hsl(290, 70%, 36%);
+    /* TEXT */
+    --clr-number-text: hsl(52, 100%, 62%);
+    --clr-equal-text: hsl(0, 0%, 100%);
+    --clr-button-text: hsl(198, 20%, 13%);
 }
 
 .attribution {
