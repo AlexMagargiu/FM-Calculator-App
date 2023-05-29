@@ -30,23 +30,54 @@
                 <input
                   type="radio"
                   name="theme-selector"
+                  class="theme-number"
                   id="theme-one"
+                  checked
                 /><label for="theme-one">1</label>
                 <input
                   type="radio"
                   name="theme-selector"
+                  class="theme-number"
                   id="theme-two"
                 /><label for="theme-two">2</label>
                 <input
                   type="radio"
                   name="theme-selector"
+                  class="theme-number"
                   id="theme-three"
                 /><label for="theme-three">3</label>
               </div>
               <div class="box">
-                <div class="circle-one show"></div>
-                <div class="circle-two show"></div>
-                <div class="circle-three show"></div>
+                <input
+                  type="radio"
+                  name="theme-selector-circle"
+                  class="no-appearance"
+                  id="circle-one-id"
+                /><label
+                  for="circle-one-id"
+                  class="circle circle-one"
+                  onclick="clickableCircles()"
+                ></label>
+                <input
+                  type="radio"
+                  name="theme-selector-circle"
+                  class="no-appearance"
+                  id="circle-two-id"
+                /><label
+                  for="circle-two-id"
+                  class="circle circle-two hidden"
+                  onclick="clickableCircles()"
+                ></label>
+                <input
+                  type="radio"
+                  name="theme-selector-circle"
+                  class="no-appearance"
+                  id="circle-three-id"
+                /><label
+                  for="circle-three-id"
+                  class="circle circle-three hidden"
+                  onclick="clickableCircles()"
+                ></label>
               </div>
             </div>
             <p>THEME</p>
@@ -54,7 +85,12 @@
         </div>
         <div class="calculate">
           <form>
-            <input type="text" name="text" class="js-calculate-output" />
+            <input
+              type="text"
+              name="text"
+              class="js-calculate-output"
+              readonly
+            />
           </form>
         </div>
         <div class="number-body">
