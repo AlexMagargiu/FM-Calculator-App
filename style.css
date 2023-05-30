@@ -16,6 +16,7 @@
     /* TEXT */
     --clr-number-text: hsl(221, 14%, 31%);
     --clr-equal-text: hsl(0, 0%, 100%);
+    --clr-button-text: hsl(0, 0%, 100%);
 }
 
 *, *::before, *::after{
@@ -52,7 +53,7 @@ main{
     width: 100%;
 }
 
-h3, .theme-number + label,.right > p, .js-calculate-output, .number.blue, .number.red{
+h3, .theme-number + label,.right > p, .js-calculate-output, .number.blue{
     color: var(--clr-equal-text);
 }
 
@@ -85,6 +86,7 @@ h3{
 .theme-number + label{
     margin-left: 0.5rem;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .box{
@@ -123,6 +125,7 @@ h3{
     font-size: 48px;
     padding: 1.5rem;
     border-radius: 8px;
+    cursor:default;
 }
 
 .number-body{
@@ -144,8 +147,12 @@ h3{
     background-color: var(--clr-number-bg);
     color: var(--clr-number-text);
     box-shadow: 0px 4px 0px var(--clr-number-shadow);
+    cursor: pointer;
 }
 
+.number:active, .number:hover, .circle:active, .circle:hover{
+    filter: brightness(130%);
+}
 
 .blue, .red{
     font-size: 24px;
@@ -154,18 +161,21 @@ h3{
 .number.blue{
     background-color: var(--clr-reset-bg);
     box-shadow: 0px 4px 0px var(--clr-reset-shadow);
+    font-size: 22px;
 }
 
 .number.red{
     background-color: var(--clr-equal-bg);
+    color: var(--clr-button-text);
     box-shadow: 0px 4px 0px var(--clr-equal-shadow);
+    font-size: 22px;
 }
 
 .double{
     width: 47.5%;
 }
 
-button{
+.number{
     font-size: 32px;
 }
 
@@ -185,6 +195,7 @@ button{
     /* TEXT */
     --clr-number-text: hsl(60, 10%, 19%);
     --clr-equal-text: hsl(0, 0%, 100%);
+    --clr-button-text: hsl(0, 0%, 100%);
 }
 
 :root:has(#theme-three:checked){
