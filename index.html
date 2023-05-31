@@ -94,24 +94,104 @@
           </form>
         </div>
         <div class="number-body">
-          <input type="button" value="7" class="number" />
-          <input type="button" value="8" class="number" />
-          <input type="button" value="9" class="number" />
+          <input
+            type="button"
+            value="7"
+            class="number"
+            onclick="addNumber('7')"
+          />
+          <input
+            type="button"
+            value="8"
+            class="number"
+            onclick="addNumber('8')"
+          />
+          <input
+            type="button"
+            value="9"
+            class="number"
+            onclick="addNumber('9')"
+          />
           <input type="button" value="DEL" class="number blue" />
-          <input type="button" value="4" class="number" />
-          <input type="button" value="5" class="number" />
-          <input type="button" value="6" class="number" />
-          <input type="button" value="+" class="number" />
-          <input type="button" value="1" class="number" />
-          <input type="button" value="2" class="number" />
-          <input type="button" value="3" class="number" />
-          <input type="button" value="-" class="number" />
-          <input type="button" value="." class="number" />
-          <input type="button" value="0" class="number" />
-          <input type="button" value="/" class="number" />
-          <input type="button" value="x" class="number" />
+          <input
+            type="button"
+            value="4"
+            class="number"
+            onclick="addNumber('4')"
+          />
+          <input
+            type="button"
+            value="5"
+            class="number"
+            onclick="addNumber('5')"
+          />
+          <input
+            type="button"
+            value="6"
+            class="number"
+            onclick="addNumber('6')"
+          />
+          <input
+            type="button"
+            value="+"
+            class="number"
+            onclick="addNumber('+')"
+          />
+          <input
+            type="button"
+            value="1"
+            class="number"
+            onclick="addNumber('1')"
+          />
+          <input
+            type="button"
+            value="2"
+            class="number"
+            onclick="addNumber('2')"
+          />
+          <input
+            type="button"
+            value="3"
+            class="number"
+            onclick="addNumber('3')"
+          />
+          <input
+            type="button"
+            value="-"
+            class="number"
+            onclick="addNumber('-')"
+          />
+          <input
+            type="button"
+            value="."
+            class="number"
+            onclick="addNumber('.')"
+          />
+          <input
+            type="button"
+            value="0"
+            class="number"
+            onclick="addNumber('0')"
+          />
+          <input
+            type="button"
+            value="/"
+            class="number"
+            onclick="addNumber('/')"
+          />
+          <input
+            type="button"
+            value="x"
+            class="number"
+            onclick="addNumber('x')"
+          />
           <input type="button" value="RESET" class="number blue double" />
-          <input type="button" value="=" class="number red double" />
+          <input
+            type="button"
+            value="="
+            class="number red double"
+            onclick="calculate()"
+          />
         </div>
       </div>
     </main>
