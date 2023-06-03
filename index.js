@@ -69,3 +69,32 @@ function clickableCircles(){
         switchThemes();
     });
 }
+
+let calculation = "";
+
+function addNumber(value) {
+  let outputElement = document.querySelector(".js-calculate-output");
+  if(value === "DEL"){
+    calculation = calculation.slice(0, -1);
+  }else{
+    calculation += value;
+  }
+  outputElement.value = calculation;
+}
+
+function calculateResult(){
+  let outputElement = document.querySelector(".js-calculate-output");
+  try{
+    const result = eval(calculation);
+    outputElement.value = Number(result.toFixed(2));
+    calculation = result.toString();
+  }catch (error){
+    outputElement.value = "Error!";
+  }
+}
+
+function clearResult(){
+  let outputElement = document.querySelector(".js-calculate-output");
+  calculation = "";
+  outputElement.value = "";
+}
