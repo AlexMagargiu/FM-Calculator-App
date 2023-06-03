@@ -27,22 +27,26 @@ function switchThemesNumber(){
     let h3 = document.querySelector("h3")
     let labels = document.querySelectorAll('.theme-number + label');
     let para = document.querySelector(".right > p");
+    let outputElement = document.querySelector(".js-calculate-output");
     h3.style.color = "var(--clr-number-text)";
     labels.forEach(label => {
         label.style.color = "var(--clr-number-text)";
     });
     para.style.color = "var(--clr-number-text)";
+    outputElement.style.color = "var(--clr-number-text)";
 }
 
 function switchThemesEqual(){
     let h3 = document.querySelector("h3")
     let labels = document.querySelectorAll('.theme-number + label');
     let para = document.querySelector(".right > p");
+    let outputElement = document.querySelector(".js-calculate-output");
     h3.style.color = "var(--clr-equal-text)";
     labels.forEach(label => {
     label.style.color = "var(--clr-equal-text)";
     });
     para.style.color = "var(--clr-equal-text)";
+    outputElement.style.color = "var(--clr-equal-text)";
 }
 
 document.querySelectorAll('.theme-number').forEach((radioInput) => {
