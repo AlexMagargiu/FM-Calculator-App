@@ -112,7 +112,7 @@
             class="number"
             onclick="addNumber('9')"
           />
-          <input type="button" value="DEL" class="number blue" />
+          <input type="button" value="DEL" class="number blue" onclick="addNumber('DEL')"/>
           <input
             type="button"
             value="4"
@@ -183,14 +183,14 @@
             type="button"
             value="x"
             class="number"
-            onclick="addNumber('x')"
+            onclick="addNumber('*')"
           />
-          <input type="button" value="RESET" class="number blue double" />
+          <input type="button" value="RESET" class="number blue double" onclick="clearResult()"/>
           <input
             type="button"
             value="="
             class="number red double"
-            onclick="calculate()"
+            onclick="calculateResult()"
           />
         </div>
       </div>
