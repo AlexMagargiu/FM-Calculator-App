@@ -227,3 +227,26 @@ h3{
 .attribution a {
     color: var(--clr-equal-text)
 }
+
+@media only screen and (max-width: 600px){
+    .container{
+        min-width: 20rem;
+    }
+    
+    .number-body{
+        gap: 0.25rem;
+        min-height: 25rem;
+    }
+
+    .number{
+        width: 3.5rem;
+    }
+
+    .number.double{
+        width: 7.9rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
